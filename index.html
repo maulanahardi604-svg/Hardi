@@ -276,6 +276,32 @@
         <p>©️ 2026 Kelas XII TKJ 1</p>
         <p>Website Biodata Kelas</p>
     </footer>
+<!-- MUSIK DECEMBER -->
+<audio id="bgMusic" loop>
+  <source src="december.mp3" type="audio/mpeg">
+</audio>
 
+<div id="playBox" onclick="playMusic()" style="position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#0066ff,#00bfff); color:white; padding:14px 22px; border-radius:50px; z-index:9999; cursor:pointer; box-shadow:0 5px 20px rgba(0,102,255,0.5); display:flex; align-items:center; gap:10px; font-weight:bold;">
+  <span id="iconPlay">▶️</span> <span id="textPlay">Putar December</span>
+</div>
+
+<script>
+function playMusic(){
+  var music = document.getElementById('bgMusic');
+  var icon = document.getElementById('iconPlay');
+  var text = document.getElementById('textPlay');
+  
+  if(music.paused){
+    music.volume = 0.8;
+    music.play();
+    icon.textContent = '⏸️';
+    text.textContent = 'December Playing...';
+  } else {
+    music.pause();
+    icon.textContent = '▶️';
+    text.textContent = 'Putar December';
+  }
+}
+</script>
 </body>
 </html>
