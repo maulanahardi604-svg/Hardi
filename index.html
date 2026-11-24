@@ -282,26 +282,45 @@
         <p>Website Biodata Kelas</p>
     </footer>
 
-<!-- FOOTER -->
-    <footer>
-        <p>©️ 2026 Kelas XII TKJ 1</p>
-        <p>Website Biodata Kelas</p>
-    </footer>
+<!-- MUSIK DECEMBER - CUMA LOGO PLAY AJA (VIDEO DISEMBUNYIIN) -->
+<div id="player" style="position:fixed; left:-1000px; top:-1000px; width:1px; height:1px;"></div>
 
-<!-- MUSIK DECEMBER FIX - DARI LINK LU -->
-<div style="position:fixed; bottom:15px; right:15px; z-index:9999; background:#111; padding:10px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.5); width:280px;">
-  <div style="color:white; font-size:13px; font-weight:bold; text-align:center; margin-bottom:8px;">🎵 December - Neck Deep</div>
-  
-  <iframe width="100%" height="160" 
-  src="https://www.youtube.com/embed/8NnQs3EtoqU?rel=0" 
-  title="December" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
-  </iframe>
-  
-  <div style="color:#aaa; font-size:10px; text-align:center; margin-top:6px;">klik play untuk ada suara</div>
+<div onclick="toggleMusic()" style="position:fixed; bottom:20px; right:20px; z-index:9999; background:linear-gradient(135deg,#0066ff,#00bfff); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 5px 20px rgba(0,102,255,0.6); cursor:pointer;">
+  <span id="playIcon" style="font-size:26px; color:white; margin-left:3px;">▶️</span>
 </div>
+
+<div id="judulLagu" style="position:fixed; bottom:28px; right:90px; z-index:9998; background:#222; color:white; padding:8px 14px; border-radius:20px; font-size:12px; font-weight:bold; display:none;">
+  🎵 December - Playing...
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+var ytPlayer;
+var isPlaying = false;
+function onYouTubeIframeAPIReady(){
+  ytPlayer = new YT.Player('player', {
+    height: '1',
+    width: '1',
+    videoId: '8NnQs3EtoqU',
+    playerVars: { 'loop': 1, 'playlist': '8NnQs3EtoqU' }
+  });
+}
+function toggleMusic(){
+  var icon = document.getElementById('playIcon');
+  var judul = document.getElementById('judulLagu');
+  if(!isPlaying){
+    ytPlayer.playVideo();
+    icon.textContent = '⏸️';
+    judul.style.display = 'block';
+    isPlaying = true;
+  } else {
+    ytPlayer.pauseVideo();
+    icon.textContent = '▶️';
+    judul.style.display = 'none';
+    isPlaying = false;
+  }
+}
+</script>
 
 </body>
 </html>
