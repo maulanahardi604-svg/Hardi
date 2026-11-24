@@ -276,53 +276,29 @@
         <p>©️ 2026 Kelas XII TKJ 1</p>
         <p>Website Biodata Kelas</p>
     </footer>
-    <!-- FOOTER -->
-    <footer>
-        <p>©️ 2026 Kelas XII TKJ 1</p>
-        <p>Website Biodata Kelas</p>
-    </footer>
+    <!-- MUSIK - HANYA TOMBOL PLAY -->
+<div id="yt-player" style="display:none;"></div>
 
-<!-- MUSIK DECEMBER - CUMA LOGO PLAY AJA (VIDEO DISEMBUNYIIN) -->
-<div id="player" style="position:fixed; left:-1000px; top:-1000px; width:1px; height:1px;"></div>
-
-<div onclick="toggleMusic()" style="position:fixed; bottom:20px; right:20px; z-index:9999; background:linear-gradient(135deg,#0066ff,#00bfff); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 5px 20px rgba(0,102,255,0.6); cursor:pointer;">
-  <span id="playIcon" style="font-size:26px; color:white; margin-left:3px;">▶️</span>
-</div>
-
-<div id="judulLagu" style="position:fixed; bottom:28px; right:90px; z-index:9998; background:#222; color:white; padding:8px 14px; border-radius:20px; font-size:12px; font-weight:bold; display:none;">
-  🎵 December - Playing...
+<div id="musicBtn" onclick="playMusik()" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:62px; height:62px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 15px rgba(0,0,0,0.4); cursor:pointer;">
+  <span id="iconPlay" style="font-size:28px; color:white;">▶️</span>
 </div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-var ytPlayer;
-var isPlaying = false;
-function onYouTubeIframeAPIReady(){
-  ytPlayer = new YT.Player('player', {
-    height: '1',
-    width: '1',
+var player;
+var udahPlay = false;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
     videoId: '8NnQs3EtoqU',
-    playerVars: { 'loop': 1, 'playlist': '8NnQs3EtoqU' }
+    width: '0',
+    height: '0',
+    playerVars: { loop: 1, playlist: '8NnQs3EtoqU' }
   });
 }
-function toggleMusic(){
-  var icon = document.getElementById('playIcon');
-  var judul = document.getElementById('judulLagu');
-  if(!isPlaying){
-    ytPlayer.playVideo();
-    icon.textContent = '⏸️';
-    judul.style.display = 'block';
-    isPlaying = true;
-  } else {
-    ytPlayer.pauseVideo();
-    icon.textContent = '▶️';
-    judul.style.display = 'none';
-    isPlaying = false;
-  }
+function playMusik() {
+  if(!udahPlay){ player.playVideo(); document.getElementById('iconPlay').innerHTML='⏸️'; udahPlay=true; } 
+  else { player.pauseVideo(); document.getElementById('iconPlay').innerHTML='▶️'; udahPlay=false; }
 }
 </script>
-
-</body>
-</html>
 </body>
 </html>
