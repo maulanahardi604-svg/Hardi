@@ -276,28 +276,21 @@
         <p>©️ 2026 Kelas XII TKJ 1</p>
         <p>Website Biodata Kelas</p>
     </footer>
-    <!-- MUSIK - HANYA TOMBOL PLAY -->
-<div id="yt-player" style="display:none;"></div>
+    <!-- HANYA TOMBOL PLAY - TANPA VIDEO -->
+<div id="musikTersembunyi" style="display:none;"></div>
 
-<div id="musicBtn" onclick="playMusik()" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:62px; height:62px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 15px rgba(0,0,0,0.4); cursor:pointer;">
-  <span id="iconPlay" style="font-size:28px; color:white;">▶️</span>
+<div onclick="mainkan()" id="btnBulat" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
+  <span id="ikon" style="color:white; font-size:28px;">▶️</span>
 </div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-var player;
-var udahPlay = false;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('yt-player', {
-    videoId: '8NnQs3EtoqU',
-    width: '0',
-    height: '0',
-    playerVars: { loop: 1, playlist: '8NnQs3EtoqU' }
-  });
-}
-function playMusik() {
-  if(!udahPlay){ player.playVideo(); document.getElementById('iconPlay').innerHTML='⏸️'; udahPlay=true; } 
-  else { player.pauseVideo(); document.getElementById('iconPlay').innerHTML='▶️'; udahPlay=false; }
+var p;
+function onYouTubeIframeAPIReady(){ p = new YT.Player('musikTersembunyi', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} }); }
+var nyala=false;
+function mainkan(){
+  if(!nyala){ p.playVideo(); document.getElementById('ikon').innerHTML='⏸️'; nyala=true; }
+  else { p.pauseVideo(); document.getElementById('ikon').innerHTML='▶️'; nyala=false; }
 }
 </script>
 </body>
