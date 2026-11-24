@@ -161,7 +161,26 @@
         <a href="#anggota">Anggota</a>
         <a href="#informasi">Informasi</a>
     </nav>
+<audio id="musik" autoplay loop>
+        <source src="Silahkan MBG nya mas.mp3" type ="audio/mpeg">
+        Browser Anda Tidak Mendukung Audio.
+        </audio>
+    <button onclick="toggleMusik()" id="tombolMusik">
+    🔇 
+</button>
 
+<script>
+function toggleMusik() {
+    const musik = document.getElementById("musik");
+    const tombol = document.getElementById("tombolMusik");
+
+    if (musik.paused) {
+        musik.play();
+        tombol.innerHTML = "🔇";
+    } else {
+        musik.pause();
+        tombol.innerHTML = "🔊 ";
+    }
     <!-- BERANDA -->
     <section id="beranda">
         <h2>halo boss</h2>
@@ -276,25 +295,6 @@
         <p>©️ 2026 Kelas XII TKJ 1</p>
         <p>Website Biodata Kelas</p>
     </footer>
-<audio id="musik" autoplay loop>
-        <source src="Silahkan MBG nya mas.mp3" type ="audio/mpeg">
-        Browser Anda Tidak Mendukung Audio.
-        </audio>
-    <button onclick="toggleMusik()" id="tombolMusik">
-    🔇 
-</button>
 
-<script>
-function toggleMusik() {
-    const musik = document.getElementById("musik");
-    const tombol = document.getElementById("tombolMusik");
-
-    if (musik.paused) {
-        musik.play();
-        tombol.innerHTML = "🔇";
-    } else {
-        musik.pause();
-        tombol.innerHTML = "🔊 ";
-    }
 </body>
 </html>
