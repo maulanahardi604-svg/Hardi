@@ -276,23 +276,6 @@
         <p>©️ 2026 Kelas XII TKJ 1</p>
         <p>Website Biodata Kelas</p>
     </footer>
-        <!-- HANYA TOMBOL PLAY - TANPA VIDEO -->
-<div id="musikTersembunyi" style="display:none;"></div>
-
-<div onclick="mainkan()" id="btnBulat" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-  <span id="ikon" style="color:white; font-size:28px;">▶️</span>
-</div>
-
-<script src="https://youtu.be/2-j5lEbRgd0?si=fsTK3_MAfgwOxTfK"></script>
-<script>
-var p;
-function onYouTubeIframeAPIReady(){ p = new YT.Player('musikTersembunyi', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} }); }
-var nyala=false;
-function mainkan(){
-  if(!nyala){ p.playVideo(); document.getElementById('ikon').innerHTML='⏸️'; nyala=true; }
-  else { p.pauseVideo(); document.getElementById('ikon').innerHTML='▶️'; nyala=false; }
-}
-</script>
     <!-- HANYA TOMBOL PLAY - TANPA VIDEO -->
 <div id="musikTersembunyi" style="display:none;"></div>
 
