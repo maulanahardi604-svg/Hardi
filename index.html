@@ -7,46 +7,27 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
         :root { --primary: #0066ff; --secondary: #00bfff; }
-        body {
-            background: #020617; color: #e2e8f0; overflow-x: hidden;
-            transition: 0.3s;
-        }
+        body { background: #020617; color: #e2e8f0; overflow-x: hidden; transition: 0.3s; }
         body.light { background: #f1f5f9; color: #0f172a; }
         body.light .profil, body.light .info-box, body.light .card { background: white; color: #0f172a; }
         #particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-        
-        header {
-            background: linear-gradient(135deg, #0066ff, #00bfff); color: white; text-align: center;
-            padding: 80px 20px 60px 20px; position: relative; overflow: hidden;
-        }
+        header { background: linear-gradient(135deg, #0066ff, #00bfff); color: white; text-align: center; padding: 80px 20px 60px 20px; position: relative; overflow: hidden; }
         header h1 { font-size: 46px; font-weight: 900; min-height: 60px; }
         header p { font-size: 20px; font-weight: 700; margin-top: 10px; }
         #countdown { background: rgba(0,0,0,0.25); display: inline-block; padding: 10px 20px; border-radius: 30px; margin-top: 20px; font-weight: 800; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
-
         .top-controls { position: fixed; top: 15px; right: 15px; z-index: 999; display: flex; gap: 10px; }
         .control-btn { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); color: white; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-size: 18px; }
-
         nav { background: rgba(2,6,23,0.8); backdrop-filter: blur(15px); padding: 18px; text-align: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 800; transition: 0.2s; }
         nav a:hover { color: var(--secondary); text-shadow: 0 0 10px var(--secondary); }
-
         section { padding: 60px 8%; position: relative; }
         h2 { text-align: center; color: white; margin-bottom: 10px; font-weight: 900; font-size: 34px; text-transform: uppercase; }
         .sub-title { text-align: center; color: #94a3b8; font-weight: 700; margin-bottom: 30px; }
         body.light h2 { color: #0f172a; }
-
         #searchAnggota { display: block; margin: 0 auto 35px auto; padding: 14px 20px; width: 100%; max-width: 400px; border-radius: 30px; border: 2px solid rgba(0,191,255,0.3); background: rgba(255,255,255,0.05); color: white; font-weight: 700; outline: none; text-align: center; }
         body.light #searchAnggota { background: white; color: black; border-color: #0066ff; }
-
-        .profil, .info-box {
-            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px;
-            text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            line-height: 1.8; font-weight: 700; border: 1px solid rgba(255,255,255,0.1);
-        }
-        .card {
-            background: rgba(255,255,255,0.95); width: 250px; border-radius: 20px; overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2); transition: 0.4s; opacity: 0; transform: translateY(30px);
-        }
+        .profil, .info-box { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.3); line-height: 1.8; font-weight: 700; border: 1px solid rgba(255,255,255,0.1); }
+        .card { background: rgba(255,255,255,0.95); width: 250px; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.2); transition: 0.4s; opacity: 0; transform: translateY(30px); }
         .card.show { opacity: 1; transform: translateY(0); }
         .card:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 15px 40px rgba(0,191,255,0.4); }
         .anggota { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
@@ -58,7 +39,6 @@
         .card p b { color: #0066ff; font-weight: 900; }
         .sosmed { margin-top: 12px; display: flex; justify-content: center; gap: 8px; }
         .sosmed a { text-decoration: none; background: #f1f5f9; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; color: #0f172a; }
-
         footer { background: #020617; color: #94a3b8; text-align: center; padding: 25px; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
@@ -78,82 +58,4 @@
         <a href="#beranda">Beranda</a>
         <a href="#profil">Profil</a>
         <a href="#anggota">Anggota</a>
-        <a href="#informasi">Info</a>
-    </nav>
-
-    <section id="beranda">
-        <h2>Halo Boss</h2>
-        <p class="sub-title">Selamat datang di markas XII TKJ 1</p>
-        <div class="profil">Selamat datang di web Hihu <b style="color:#00bfff;">XII TKJ 1</b>. Website ini berisi informasi mengenai kelas, wali kelas, dan biodata peserta didik yang paling solid se-SMK SETIA DARMA.</div>
-    </section>
-
-    <section id="profil">
-        <h2>Profil Kelas</h2>
-        <div class="profil">
-            <p><b>Nama Sekolah:</b> SMK SETIA DARMA</p>
-            <p><b>Kelas:</b> XII TKJ 1</p>
-            <p><b>Wali Kelas:</b> Diah Bunga Ditasari</p>
-            <p><b>Tahun Pelajaran:</b> 2026/2027</p>
-        </div>
-    </section>
-
-    <section id="anggota">
-        <h2>Biodata Anggota</h2>
-        <p class="sub-title">Cari teman lu di bawah</p>
-        <input type="text" id="searchAnggota" placeholder="🔍 Cari nama... contoh: ASEP" onkeyup="cariAnggota()">
-        <div class="anggota">
-            <div class="card"><div class="foto"><img src="IMG_20261124_130659.jpg"></div><h3>ASEP</h3><p><b>NIS:</b> 999</p><p><b>Hobi:</b> Makan</p><p><b>Cita:</b> Joki ML</p><div class="sosmed"><a href="#">IG</a><a href="#">TikTok</a></div></div>
-            <div class="card"><div class="foto"><img src="IMG_20261126_133346.jpg"></div><h3>SUEP</h3><p><b>NIS:</b> 002</p><p><b>Hobi:</b> PHP</p><p><b>Cita:</b> Wapres</p><div class="sosmed"><a href="#">IG</a><a href="#">TikTok</a></div></div>
-            <div class="card"><div class="foto"><img src="IMG_20261126_133315.jpg"></div><h3>ISMAIL</h3><p><b>NIS:</b> 003</p><p><b>Hobi:</b> Pickme</p><p><b>Cita:</b> Presiden</p><div class="sosmed"><a href="#">IG</a><a href="#">TikTok</a></div></div>
-            <div class="card"><div class="foto"><img src="IMG_20261126_133330.jpg"></div><h3>MALIK</h3><p><b>NIS:</b> 004</p><p><b>Hobi:</b> Musik</p><p><b>Cita:</b> Pilot</p><div class="sosmed"><a href="#">IG</a><a href="#">TikTok</a></div></div>
-        </div>
-    </section>
-
-    <section class="info" id="informasi">
-        <h2>Informasi Kelas</h2>
-        <div class="info-box">
-            <p>👨‍🏫 <b>Wali Kelas:</b> Diah Bunga Ditasari</p>
-            <p>👥 <b>Jumlah:</b> 30 orang</p>
-            <p>🏫 <b>Ruang:</b> TKJ 1</p>
-            <p>📅 <b>Kelulusan:</b> <span id="tglLulus"></span></p>
-            <p>🏆 <b>Motto:</b> Kompak, Kreatif, dan Berprestasi!</p>
-        </div>
-    </section>
-
-    <footer><p>©️ 2026 Kelas XII TKJ 1 - Dibuat dengan ❤️</p></footer>
-
-<!-- MUSIK - CUMA TOMBOL -->
-<div id="musikTersembunyi" style="display:none;"></div>
-<div onclick="mainkan()" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:linear-gradient(135deg,#0066ff,#00bfff); width:62px; height:62px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 20px rgba(0,102,255,0.6);"><span id="ikon" style="color:white; font-size:28px;">▶️</span></div>
-
-<script>
-// TYPING EFFECT
-const text = "📚 XII TKJ 1"; let i=0; function typing(){ if(i<text.length){ document.getElementById('typing').innerHTML+=text.charAt(i); i++; setTimeout(typing, 120);} } typing();
-
-// COUNTDOWN LULUS - 20 Mei 2027
-const tglLulus = new Date("2027-05-20").getTime();
-document.getElementById('tglLulus').innerText = "20 Mei 2027";
-setInterval(()=>{ let now=new Date().getTime(); let d=tglLulus-now; let hari=Math.floor(d/(1000*60*60*24)); document.getElementById('countdown').innerHTML = `🎓 Menuju Kelulusan: <b>${hari} Hari Lagi</b>`; },1000);
-
-// SEARCH
-function cariAnggota(){ let input=document.getElementById('searchAnggota').value.toLowerCase(); document.querySelectorAll('.card').forEach(c=>{ let nama=c.querySelector('h3').innerText.toLowerCase(); c.style.display = nama.includes(input) ? "block" : "none"; }); }
-
-// SCROLL ANIMATION
-const observer = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }); }, {threshold:0.2});
-document.querySelectorAll('.card').forEach(c=>observer.observe(c));
-
-// DARK/LIGHT
-function toggleTheme(){ document.body.classList.toggle('light'); document.getElementById('themeBtn').innerText = document.body.classList.contains('light') ? '☀️' : '🌙'; }
-
-// PARTICLES
-const canvas=document.getElementById('particles'); const ctx=canvas.getContext('2d'); canvas.width=window.innerWidth; canvas.height=window.innerHeight;
-let particles=[]; for(let i=0;i<70;i++) particles.push({x:Math.random()*canvas.width, y:Math.random()*canvas.height, vx:(Math.random()-0.5)*0.5, vy:(Math.random()-0.5)*0.5, r:Math.random()*2+1});
-function draw(){ ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle='rgba(0,191,255,0.5)'; particles.forEach(p=>{ p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>canvas.width) p.vx*=-1; if(p.y<0||p.y>canvas.height) p.vy*=-1; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); }); requestAnimationFrame(draw); } draw();
-
-// MUSIK YOUTUBE - CUMA LOGO
-var p; function onYouTubeIframeAPIReady(){ p = new YT.Player('musikTersembunyi', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} }); }
-var nyala=false; function mainkan(){ if(!nyala){ p.playVideo(); document.getElementById('ikon').innerHTML='⏸️'; nyala=true; } else { p.pauseVideo(); document.getElementById('ikon').innerHTML='▶️'; nyala=false; } }
-</script>
-<script src="https://www.youtube.com/iframe_api"></script>
-</body>
-    </html>
+        <a href
