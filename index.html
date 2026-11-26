@@ -3,295 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Kelas  XII TKJ 1</title>
-
+    <title>Biodata Kelas XII TKJ 1</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f4f6f8;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0066ff, #00bfff);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        header h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 18px;
-        }
-
-        nav {
-            background: #222;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #00bfff;
-        }
-
-        section {
-            padding: 45px 8%;
-        }
-
-        h2 {
-            text-align: center;
-            color: #0066ff;
-            margin-bottom: 25px;
-        }
-
-        .profil {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            line-height: 1.8;
-        }
-
-        .anggota {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            width: 230px;
-            padding: 20px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .foto {
-    width: 100%;
-    aspect-ratio:4/3;
-    text-align: center;
-    cursor:pointer;
-    object-fit: cover;
-    display: block;
-    border-radius:0;
-    transform:scale(1.03);
-}
-
-.foto img {
-    width:100%;
-            height: 100%;
-            object-fit: cover;
-
-        }
-
-        .card h3 {
-            color: #0066ff;
-            margin: 15px 0;
-        }
-
-        .card p {
-            margin: 7px 0;
-        }
-
-        .info {
-            background: #e8f3ff;
-        }
-
-        .info-box {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            line-height: 2;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f4f6f8; color: #333; }
+        header { background: linear-gradient(135deg, #0066ff, #00bfff); color: white; text-align: center; padding: 50px 20px; }
+        header h1 { font-size: 38px; margin-bottom: 10px; }
+        header p { font-size: 18px; }
+        nav { background: #222; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #00bfff; }
+        section { padding: 45px 8%; }
+        h2 { text-align: center; color: #0066ff; margin-bottom: 25px; }
+        .profil { background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); line-height: 1.8; }
+        .anggota { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .card { background: white; width: 230px; padding: 20px; text-align: center; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .foto { width: 100%; aspect-ratio:4/3; text-align: center; cursor:pointer; object-fit: cover; display: block; border-radius:0; transform:scale(1.03); }
+        .foto img { width:100%; height: 100%; object-fit: cover; }
+        .card h3 { color: #0066ff; margin: 15px 0; }
+        .card p { margin: 7px 0; }
+        .info { background: #e8f3ff; }
+        .info-box { max-width: 600px; margin: auto; background: white; padding: 25px; border-radius: 15px; line-height: 2; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; }
+        @media (max-width: 600px) { header h1 { font-size: 28px; } nav a { display: inline-block; margin: 5px; } }
     </style>
 </head>
-
 <body>
-
-    <!-- HEADER -->
     <header>
         <h1>📚 XII TKJ 1</h1>
         <p>Website Biodata Kelas</p>
     </header>
-
-    <!-- MENU -->
     <nav>
         <a href="#beranda">Beranda</a>
         <a href="#profil">Profil Kelas</a>
         <a href="#anggota">Anggota</a>
         <a href="#informasi">Informasi</a>
     </nav>
-
-    <!-- BERANDA -->
     <section id="beranda">
         <h2>halo boss</h2>
-
         <div class="profil">
-            <p>
-                Selamat datang di web Hihu
-                <b>XII TKJ 1</b>.
-            </p>
-
-            <p>
-                Website ini berisi informasi mengenai kelas,
-                wali kelas, dan biodata peserta didik.
-            </p>
+            <p>Selamat datang di web Hihu <b>XII TKJ 1</b>.</p>
+            <p>Website ini berisi informasi mengenai kelas, wali kelas, dan biodata peserta didik.</p>
         </div>
     </section>
-
-    <!-- PROFIL -->
     <section id="profil">
-
         <h2>Profil Kelas</h2>
-
         <div class="profil">
-
             <p><b>Nama Sekolah:</b> SMK SETIA DARMA</p>
             <p><b>Kelas:</b> XII TKJ 1</p>
             <p><b>Wali Kelas:</b> Diah bunga ditasari</p>
             <p><b>Tahun Pelajaran:</b> 2026/2027</p>
-
         </div>
-
     </section>
-
-    <!-- ANGGOTA -->
     <section id="anggota">
-
         <h2>Biodata Anggota Kelas</h2>
-
         <div class="anggota">
-
             <div class="card">
-                <div class="foto">
-    <img src="IMG_20261124_130659.jpg" alt="Foto ASEP">
-                    </div>
+                <div class="foto"><img src="IMG_20261124_130659.jpg" alt="Foto ASEP"></div>
                 <h3>ASEP</h3>
                 <p><b>NIS:</b> 999</p>
                 <p><b>Jenis Kelamin:</b> laki-laki</p>
                 <p><b>Hobi:</b> makan</p>
                 <p><b>Cita-cita:</b> joki Ml</p>
             </div>
-
             <div class="card">
-                <div class="foto">
-                    <img src="IMG_20261124_130659.jpg" alt="Foto SUEP">
-                    </div>
+                <div class="foto"><img src="IMG_20261124_130659.jpg" alt="Foto SUEP"></div>
                 <h3>SUEP</h3>
                 <p><b>NIS:</b> 002</p>
                 <p><b>Jenis Kelamin:</b>Laki-Laki</p>
                 <p><b>Hobi:</b> PHP</p>
                 <p><b>Cita-cita:</b> Wakil presiden</p>
             </div>
-
             <div class="card">
-                <div class="foto">
-                    <img src="IMG_20261124_130659.jpg" alt="Foto ISMAIL">
-                    </div>
+                <div class="foto"><img src="IMG_20261124_130659.jpg" alt="Foto ISMAIL"></div>
                 <h3>ISMAIL</h3>
                 <p><b>NIS:</b> 003</p>
                 <p><b>Jenis Kelamin:</b> Laki-laki</p>
                 <p><b>Hobi:</b> Pickme</p>
                 <p><b>Cita-cita:</b> Presiden</p>
             </div>
-
             <div class="card">
-                <div class="foto">
-                    <img src="IMG_20261124_130659.jpg" alt="Foto MALIK">
-                    </div>
+                <div class="foto"><img src="IMG_20261124_130659.jpg" alt="Foto MALIK"></div>
                 <h3>MALIK</h3>
                 <p><b>NIS:</b> 004</p>
                 <p><b>Jenis Kelamin:</b> Laki-laki</p>
                 <p><b>Hobi:</b> Musik</p>
                 <p><b>Cita-cita:</b> Pilot</p>
             </div>
-
         </div>
-
     </section>
-
-    <!-- INFORMASI -->
     <section class="info" id="informasi">
-
         <h2>Informasi Kelas</h2>
-
         <div class="info-box">
-
             <p>👨‍🏫 <b>Wali Kelas:</b>Diah bunga ditasari</p>
-
             <p>👥 <b>Jumlah Peserta Didik:</b> 30 orang</p>
-
             <p>🏫 <b>Ruang Kelas:</b> TKJ 1</p>
-
             <p>📅 <b>Tahun Pelajaran:</b> 2026/2027</p>
-
             <p>🏆 <b>Motto:</b> Kompak, Kreatif, dan Berprestasi!</p>
-
         </div>
-
     </section>
-
-    <!-- FOOTER -->
     <footer>
         <p>©️ 2026 Kelas XII TKJ 1</p>
         <p>Website Biodata Kelas</p>
     </footer>
-    <!-- HANYA TOMBOL PLAY - TANPA VIDEO -->
-<div id="musikTersembunyi" style="display:none;"></div>
 
-<div onclick="mainkan()" id="btnBulat" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-  <span id="ikon" style="color:white; font-size:28px;">▶️</span>
+<!-- 2 LAGU - 2 TOMBOL BEDA WARNA - TANPA VIDEO -->
+<div id="musik1" style="display:none;"></div>
+<div id="musik2" style="display:none;"></div>
+
+<!-- TOMBOL 1 - BIRU - LAGU DECEMBER -->
+<div onclick="mainkan1()" style="position:fixed; bottom:90px; right:20px; z-index:99999; background:#0066ff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.5); border:2px solid white;">
+  <span id="ikon1" style="color:white; font-size:26px;">🎵1</span>
+</div>
+
+<!-- TOMBOL 2 - MERAH - LAGU BARU -->
+<div onclick="mainkan2()" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#ff0040; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.5); border:2px solid white;">
+  <span id="ikon2" style="color:white; font-size:26px;">🎵2</span>
 </div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-var p;
-function onYouTubeIframeAPIReady(){ p = new YT.Player('musikTersembunyi', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} }); }
-var nyala=false;
-function mainkan(){
-  if(!nyala){ p.playVideo(); document.getElementById('ikon').innerHTML='⏸️'; nyala=true; }
-  else { p.pauseVideo(); document.getElementById('ikon').innerHTML='▶️'; nyala=false; }
+var player1, player2;
+function onYouTubeIframeAPIReady(){
+  player1 = new YT.Player('musik1', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} });
+  player2 = new YT.Player('musik2', { videoId: '2-j5lEbRgd0', playerVars:{loop:1, playlist:'2-j5lEbRgd0'} });
+}
+var nyala1=false, nyala2=false;
+
+function mainkan1(){
+  if(!nyala1){
+    if(nyala2){ player2.pauseVideo(); document.getElementById('ikon2').innerHTML='🎵2'; nyala2=false; }
+    player1.playVideo(); document.getElementById('ikon1').innerHTML='⏸️'; nyala1=true;
+  } else { player1.pauseVideo(); document.getElementById('ikon1').innerHTML='🎵1'; nyala1=false; }
+}
+
+function mainkan2(){
+  if(!nyala2){
+    if(nyala1){ player1.pauseVideo(); document.getElementById('ikon1').innerHTML='🎵1'; nyala1=false; }
+    player2.playVideo(); document.getElementById('ikon2').innerHTML='⏸️'; nyala2=true;
+  } else { player2.pauseVideo(); document.getElementById('ikon2').innerHTML='🎵2'; nyala2=false; }
 }
 </script>
 </body>
-                                  </html>
+                                      </html>
