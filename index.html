@@ -1,74 +1,256 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XII TKJ 1 - KEDAP KEDIP</title>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif; }
-body { background:#020617; color:white; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Kelas  XII TKJ 1</title>
 
-@keyframes kedip {
-  0%, 100% { opacity: 1; text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 40px #0066ff; }
-  50% { opacity: 0.6; text-shadow: 0 0 5px #00bfff, 0 0 10px #0066ff; }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066ff, #00bfff);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bfff;
+        }
+
+        section {
+            padding: 45px 8%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0066ff;
+            margin-bottom: 25px;
+        }
+
+        .profil {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .anggota {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 230px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .foto {
+    width: 100%;
+    aspect-ratio:4/3;
+    text-align: center;
+    cursor:pointer;
+    object-fit: cover;
+    display: block;
+    border-radius:0;
+    transform:scale(1.03);
 }
-@keyframes kedipBorder {
-  0%, 100% { box-shadow: 0 0 10px #00bfff, 0 0 20px #0066ff; border-color: #00bfff; }
-  50% { box-shadow: 0 0 2px #0066ff; border-color: #222; }
-}
-@keyframes kedipTombol {
-  0%, 100% { box-shadow: 0 0 15px #00bfff, 0 0 30px #0066ff; transform: scale(1); }
-  50% { box-shadow: 0 0 5px #0066ff; transform: scale(1.05); }
-}
 
-header { background: linear-gradient(135deg,#000,#0a192f); padding: 60px 20px; text-align:center; border-bottom: 3px solid #00bfff; animation: kedipBorder 1.5s infinite; }
-header h1 { font-size: 50px; font-weight: 900; animation: kedip 1s infinite; }
-header p { font-weight: 800; margin-top: 10px; animation: kedip 1.5s infinite; }
+.foto img {
+    width:100%;
+            height: 100%;
+            object-fit: cover;
 
-section { padding: 40px 8%; }
-h2 { text-align:center; font-size: 32px; font-weight: 900; margin-bottom: 25px; animation: kedip 2s infinite; }
+        }
 
-.profil { background: rgba(255,255,255,0.05); border: 2px solid #00bfff; padding: 25px; border-radius: 15px; text-align:center; font-weight: 800; line-height: 2; animation: kedipBorder 2s infinite; }
-.profil b { color: #00bfff; font-weight: 900; }
+        .card h3 {
+            color: #0066ff;
+            margin: 15px 0;
+        }
 
-.anggota { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-.card { background:white; color:#0f172a; width:240px; border-radius:15px; overflow:hidden; text-align:center; padding-bottom:15px; border: 3px solid #00bfff; animation: kedipBorder 1.8s infinite; }
-.foto { width:100%; aspect-ratio:1/1; overflow:hidden; }
-.foto img { width:100%; height:100%; object-fit:cover; }
-.card h3 { font-weight:900; margin:12px 0; font-size:20px; animation: kedip 1.2s infinite; color: #0066ff; }
-.card p { font-weight:800; font-size:13px; margin:4px 0; }
-.card p b { color:#0066ff; font-weight:900; }
+        .card p {
+            margin: 7px 0;
+        }
 
-footer { background:black; text-align:center; padding:20px; border-top:3px solid #00bfff; animation: kedipBorder 1s infinite; font-weight:800; }
+        .info {
+            background: #e8f3ff;
+        }
 
-#btnBulat { animation: kedipTombol 1s infinite; }
-</style>
+        .info-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            line-height: 2;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-<h1>📚 XII TKJ 1</h1>
-<p>Website Biodata Kelas - KEDAP KEDIP</p>
-</header>
+    <!-- HEADER -->
+    <header>
+        <h1>📚 XII TKJ 1</h1>
+        <p>Website Biodata Kelas</p>
+    </header>
 
-<section>
-<h2>Profil Kelas</h2>
-<div class="profil">
-<p><b>Sekolah:</b> SMK SETIA DARMA</p>
-<p><b>Kelas:</b> XII TKJ 1</p>
-<p><b>Wali Kelas:</b> Diah bunga ditasari</p>
-<p><b>Tahun:</b> 2026/2027</p>
-</div>
-</section>
+    <!-- MENU -->
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil Kelas</a>
+        <a href="#anggota">Anggota</a>
+        <a href="#informasi">Informasi</a>
+    </nav>
 
-<section>
-<h2>Biodata Anggota</h2>
-<div class="anggota">
-<div class="card"><div class="foto"><img src="IMG_20261124_130659.jpg"></div><h3>ASEP</h3><p><b>NIS:</b> 999</p><p><b>Hobi:</b> Makan</p><p><b>Cita:</b> Joki ML</p></div>
-<div class="card"><div class="foto"><img src="IMG_20261124_130659.jpg"></div><h3>SUEP</h3><p><b>NIS:</b> 002</p><p><b>Hobi:</b> PHP</p><p><b>Cita:</b> Wapres</p></div>
-<div class="card"><div class="foto"><img src="IMG_20261124_130659.jpg"></div><h3>ISMAIL</h3><p><b>NIS:</b> 003</p><p><b>Hobi:</b> Pickme</p><p><b>Cita:</b> Presiden</p></div>
-<div class="card"><div class="foto"><img src="IMG_20261124_130659.jpg"></div><h3>MALIK</h3><p><b>NIS:</b> 004</p><p><b>Hobi:</b> Musik</p><p><b>Cita:</b> Pilot</p></div>
-      <!-- INFORMASI -->
+    <!-- BERANDA -->
+    <section id="beranda">
+        <h2>halo boss</h2>
+
+        <div class="profil">
+            <p>
+                Selamat datang di web Hihu
+                <b>XII TKJ 1</b>.
+            </p>
+
+            <p>
+                Website ini berisi informasi mengenai kelas,
+                wali kelas, dan biodata peserta didik.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil">
+
+        <h2>Profil Kelas</h2>
+
+        <div class="profil">
+
+            <p><b>Nama Sekolah:</b> SMK SETIA DARMA</p>
+            <p><b>Kelas:</b> XII TKJ 1</p>
+            <p><b>Wali Kelas:</b> Diah bunga ditasari</p>
+            <p><b>Tahun Pelajaran:</b> 2026/2027</p>
+
+        </div>
+
+    </section>
+
+    <!-- ANGGOTA -->
+    <section id="anggota">
+
+        <h2>Biodata Anggota Kelas</h2>
+
+        <div class="anggota">
+
+            <div class="card">
+                <div class="foto">
+    <img src="IMG_20261124_130659.jpg" alt="Foto ASEP">
+                    </div>
+                <h3>ASEP</h3>
+                <p><b>NIS:</b> 999</p>
+                <p><b>Jenis Kelamin:</b> laki-laki</p>
+                <p><b>Hobi:</b> makan</p>
+                <p><b>Cita-cita:</b> joki Ml</p>
+            </div>
+
+            <div class="card">
+                <div class="foto">
+                    <img src="IMG_20261124_130659.jpg" alt="Foto SUEP">
+                    </div>
+                <h3>SUEP</h3>
+                <p><b>NIS:</b> 002</p>
+                <p><b>Jenis Kelamin:</b>Laki-Laki</p>
+                <p><b>Hobi:</b> PHP</p>
+                <p><b>Cita-cita:</b> Wakil presiden</p>
+            </div>
+
+            <div class="card">
+                <div class="foto">
+                    <img src="IMG_20261124_130659.jpg" alt="Foto ISMAIL">
+                    </div>
+                <h3>ISMAIL</h3>
+                <p><b>NIS:</b> 003</p>
+                <p><b>Jenis Kelamin:</b> Laki-laki</p>
+                <p><b>Hobi:</b> Pickme</p>
+                <p><b>Cita-cita:</b> Presiden</p>
+            </div>
+
+            <div class="card">
+                <div class="foto">
+                    <img src="IMG_20261124_130659.jpg" alt="Foto MALIK">
+                    </div>
+                <h3>MALIK</h3>
+                <p><b>NIS:</b> 004</p>
+                <p><b>Jenis Kelamin:</b> Laki-laki</p>
+                <p><b>Hobi:</b> Musik</p>
+                <p><b>Cita-cita:</b> Pilot</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- INFORMASI -->
     <section class="info" id="informasi">
 
         <h2>Informasi Kelas</h2>
@@ -88,18 +270,28 @@ footer { background:black; text-align:center; padding:20px; border-top:3px solid
         </div>
 
     </section>
-  
-<footer>©️ 2026 XII TKJ 1 - KEDAP KEDIP EDITION</footer>
 
-<!-- MUSIK CUMA TOMBOL KEDAP KEDIP -->
+    <!-- FOOTER -->
+    <footer>
+        <p>©️ 2026 Kelas XII TKJ 1</p>
+        <p>Website Biodata Kelas</p>
+    </footer>
+    <!-- HANYA TOMBOL PLAY - TANPA VIDEO -->
 <div id="musikTersembunyi" style="display:none;"></div>
-<div onclick="mainkan()" id="btnBulat" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:65px; height:65px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;">
-<span id="ikon" style="color:white; font-size:30px;">▶️</span>
+
+<div onclick="mainkan()" id="btnBulat" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#0066ff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
+  <span id="ikon" style="color:white; font-size:28px;">▶️</span>
 </div>
+
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-var p; function onYouTubeIframeAPIReady(){ p = new YT.Player('musikTersembunyi', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} }); }
-var nyala=false; function mainkan(){ if(!nyala){ p.playVideo(); document.getElementById('ikon').innerHTML='⏸️'; nyala=true; } else { p.pauseVideo(); document.getElementById('ikon').innerHTML='▶️'; nyala=false; } }
+var p;
+function onYouTubeIframeAPIReady(){ p = new YT.Player('musikTersembunyi', { videoId: '8NnQs3EtoqU', playerVars:{loop:1, playlist:'8NnQs3EtoqU'} }); }
+var nyala=false;
+function mainkan(){
+  if(!nyala){ p.playVideo(); document.getElementById('ikon').innerHTML='⏸️'; nyala=true; }
+  else { p.pauseVideo(); document.getElementById('ikon').innerHTML='▶️'; nyala=false; }
+}
 </script>
 </body>
-    </html>
+                                  </html>
